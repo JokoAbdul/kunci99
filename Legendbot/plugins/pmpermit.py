@@ -128,13 +128,9 @@ async def do_pm_permit_action(event, chat):  # sourcery no-metrics
             remwarns=remwarns,
         )
     elif gvarstatus("pmmenu") is None:
-        USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me. 
-You have {warns}/{totalwarns} warns until you get blocked by the LegendUserBot.
-Choose an option from below to specify the reason of your message and wait for me to check it. __⬇️"""
+        USER_BOT_NO_WARN = f""halo apa sayang"""
     else:
-        USER_BOT_NO_WARN = f"""__Hi__ {mention}__, I haven't approved you yet to personal message me.
-You have {warns}/{totalwarns} warns until you get blocked by the LegendUserBot.
---Don't spam my inbox. say reason and wait until my response.--"""
+        USER_BOT_NO_WARN = f"""halo apa sayang"""
     addgvar("pmpermit_text", USER_BOT_NO_WARN)
     PM_WARNS[str(chat.id)] += 1
     try:
@@ -144,7 +140,7 @@ You have {warns}/{totalwarns} warns until you get blocked by the LegendUserBot.
         else:
             PM_IMG = (
                 gvarstatus("PM_IMG")
-                or "https://telegra.ph/file/69fa26f4659e377dea80e.jpg"
+                or ""
             )
             if PM_IMG == "OFF":
                 LEGEND_IMG = None
